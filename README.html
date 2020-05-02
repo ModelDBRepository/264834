@@ -1,0 +1,48 @@
+<html>
+<p><strong>*** README ***</strong>
+</p>
+<p>Optimised PV neuron with NaV1.1 conductance used in:
+</p>
+<p>Berecki G, Bryson A, Terhag J, Maljevic S, Gazina EV, Hill SL, Petrou S (2019) SCN1A gain of function in early infantile encephalopathy. Ann Neurol 85:514-525
+<br/>doi: <a href="http://dx.doi.org/10.1002/ana.25438">10.1002/ana.25438</a>
+</p>
+<p>This model uses the NEURON simulation environment and was contributed by A Bryson.
+</p>
+<p>Model morphology and mechanisms taken from the BBP Neocortical Microcircuit Portal:
+<br/><a href="https://bbp.epfl.ch/nmc-portal/welcome">https://bbp.epfl.ch/nmc-portal/welcome</a>
+</p>
+<p>The model was optimised using BluePyOpt:
+</p>
+<p>"Van Geit W, Gevaert M, Chindemi G, Rossert C, Courcol J, Muller EB, Schurmann F, Segev I and Markram H (2016).BluePyOpt: Leveraging open source software and cloud infrastructure to optimise model parameters in neuroscience. Front. Neuroinform. 10:17.
+<br/>doi: <a href="https://doi.org/10.3389/fninf.2016.00017">10.3389/fninf.2016.00017</a>
+</p>
+<p>HOC template for PV model is found in 'PV_template.hoc'
+</p>
+<p>Morphology and mechanisms found under '/morphologies' and '/mechanisms'
+</p>
+<p>run.py contains a short script to generate the time-voltage traces and
+the first part (it is easy to edit the code to provide more if
+desired) of the IF curves found in Figures 4C and 4D/
+</p>
+<p>First compile the mod files with a command like
+nrnivmodl mechanisms
+</p>
+<p>To generate figures, run with either 'if' or 'trace' as plot argument:
+</p>
+<p>python run.py --plot trace
+</p>
+<p>The above takes under 20 seconds to run and generates pdf's for these
+in the save folder:
+</p>
+<p><img src="./save/screenshot_het.png" alt="screenshot het">
+</p>
+<p><img src="./save/screenshot_hom.png" alt="screenshot hom">
+</p>
+<p>The 'if' plot argument in the above command takes about 35 minutes and
+produces a file save/if.pdf with these traces:
+</p>
+<p><img src="./save/screenshot_if_het.png" alt="screenshot if het">
+</p>
+<p><img src="./save/screenshot_if_hom.png" alt="screenshot if hom">
+</p>
+</html>
